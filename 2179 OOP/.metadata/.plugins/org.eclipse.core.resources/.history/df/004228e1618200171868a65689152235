@@ -1,0 +1,117 @@
+//============================================================================
+// Name        : Assignment14.cpp
+// Author      : 
+// Version     :
+// Copyright   : Your copyright notice
+// Description : Hello World in C++, Ansi-style
+//============================================================================
+
+#include <iostream>
+#include<string.h>
+using namespace std;
+
+class User
+{
+private:
+	int age , wh;    //wh=no. of wheels on vehicle
+	string city;
+	long long int sal;
+public:
+	void input();
+	void display();
+};
+
+void User::input()
+{
+	do
+	{
+		cout<<"Enter age \n";
+		cin>>age;
+
+	}while(age<18 && age>55);
+	do
+	{
+		cout<<"Enter income \n";
+		cin>>sal;
+	}while(sal<50000 && sal>100000);
+	do
+	{
+		cout<<"Enter city Pune/Bangalore/Mumbai/Chennai \n";
+		cin>>city;
+	}while(city!="Pune"||city!="pune"||city!="bangalore"||city!="Bangalore"||city!="Mumbai"||city!="mumbai"||city!="Chennai"||city!="chennai");
+	do
+	{
+		cout<<"2-4 wheeler vehicle? \n";
+		cin>>wh;
+	}while(wh>4&&wh<2);
+		if(wh!=4)
+			{
+				cout<<"Vehicle should be 4 wheeler"<<endl;
+			}
+			else
+			{
+				cout<<"Vehicle: "<<wh<<" wheeler"<<endl;
+			}
+}
+
+/*void User::display()
+{
+	if(age>18 && age<55)
+	{
+		cout<<"Age: "<<age<<endl;
+	}
+	else
+	{
+		cout<<"Age should be between 18-55"<<endl;
+	}
+	if(sal>50000 && sal<100000)
+	{
+		cout<<"Income: "<<sal<<endl;
+	}
+	else
+	{
+		cout<<"Income should be between Rs.50,000-1,00,000 per annum"<<endl;
+	}
+
+		if(city=="Pune"||city=="pune"||city=="bangalore"||city=="Bangalore"||city=="Mumbai"||city=="mumbai"||city=="Chennai"||city=="chennai")
+			{
+				cout<<"City: "<<city<<endl;
+			}
+			else
+			{
+				cout<<"Not present in the mentioned cities"<<endl;
+			}
+
+	if(wh!=4)
+	{
+		cout<<"Vehicle should be 4 wheeler"<<endl;
+	}
+	else
+	{
+		cout<<"Vehicle: "<<wh<<" wheeler"<<endl;
+	}
+}
+*/
+int main()
+{
+	User u;
+	u.input();
+
+	return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

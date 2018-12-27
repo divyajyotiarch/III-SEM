@@ -1,0 +1,90 @@
+/*
+ ============================================================================
+ Name        : Assignment11.cpp
+ Author      : OS
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C++,
+ ============================================================================
+ */
+
+#include <iostream>
+
+using namespace std;
+
+class search
+{
+	int rno[10]={2179, 2235, 2282, 2175, 2125, 2145, 2256, 2347, 2341, 2454},
+			srno[11]={2179, 2235, 2282, 2175, 2125, 2145, 2256, 2347, 2341, 2454};
+public:
+	void linear_search(int);
+	void sentinel_search(int);
+	void binary_search(int);
+	void fibo_search(int);
+};
+
+void search::linear_search(int x)
+{
+	for(int i=0;i<10;i++)
+	{
+		if(x==rno[i])
+		{
+			cout<<"Using Linear search Student found with Roll no "<<x;
+		}
+		else
+		{
+			cout<<"Not found";
+		}
+	}
+}
+
+void search::sentinel_search(int x)
+{
+	srno[11]=x;
+	for(int i=0; ;i++)
+	{
+		if(x==srno[i])
+		{
+			if(i!=11)
+			{
+				cout<<"Using Sentinel search Student found with Roll no "<<x;
+			}
+			else
+					{
+						cout<<"Not found";
+					}
+		}
+	}
+}
+
+int main()
+{
+	search s;
+	int n;
+	cout<<"Enter the roll no. you wish to search \n";
+	cin>>n;
+	int c;
+		do
+		{
+			cout<<"1. Input \n";
+			cout<<"2. Linear search \n";
+			cout<<"3. Sentinel search \n";
+			cout<<"4. Binary search \n";
+			cout<<"5. Fibonacci Search \n";
+			cout<<"3. Exit \n";
+			cin>>c;
+			switch(c)
+			{
+			case 1:   s.linear_search(n);
+				break;
+			case 2:		s.sentinel_search(n);
+				break;
+			case 3:		s.binary_search(n);
+				break;
+			case 4:		s.fibo_search(n);
+				break;
+			}
+
+		}while(c<5);
+		return 0;
+}

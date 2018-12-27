@@ -1,0 +1,144 @@
+/*
+ ============================================================================
+ Name        : Assignment1.c
+ Author      : hh
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+#include<stdio.h>
+void either(int);
+void both(int);
+void cricket(int [],int,int[]);
+void badminton(int [],int,int[]);
+void neither(int);
+struct student
+{
+int rollno;
+int bad;
+int crick;
+}s[100];
+int main()
+{
+int n,i,j,a[100],b[100],count=0,count1=0,choice;
+printf("Enter the no of students\n");
+scanf("%d",&n);
+printf("Enter the roll no of students\n");
+for(i=0;i<n;i++)
+{
+scanf("%d",&s[i].rollno);
+  for(j=0;j<i;j++)
+  {
+  if(s[j].rollno==s[i].rollno)
+  {
+  printf("Repeated");
+  i=i-1;
+          break;
+  }
+  }
+}
+printf("Enter 1 if you are playing badminton or else 0\n");
+for(i=0;i<n;i++)
+{
+scanf("%d",&s[i].bad);
+}
+printf("Enter 1 if you are playing cricket or else 0\n");
+for(i=0;i<n;i++)
+{
+scanf("%d",&s[i].crick);
+}
+for(i=0;i<n;i++)
+{
+if(s[i].bad==1)
+{
+
+a[count]=s[i].rollno;
+count++;
+}
+}
+for(i=0;i<n;i++)
+{
+if(s[i].crick==1)
+{
+
+b[count1]=s[i].rollno;
+count1++;
+}
+}
+do{
+printf("\nPress 1 to display rollnos of students playing either cricket,badminton and both\n");
+printf("Press 2 to display rollnos of students playing both cricket and badminton\n");
+printf("Press 3 to display rollnos of students playing only cricket\n");
+printf("Press 4 to display rollnos of students playing only badminton\n");
+printf("Press 5 to display rollnos of students playing neither cricket nor badminton\n");
+printf("Press 6 to exit\n");
+printf("Enter your choice\n");
+scanf("%d",&choice);
+switch(choice)
+{
+case 1:either(n);
+break;
+case 2:both(n);
+       break;
+case 3:cricket(b,count1,a);
+break;
+case 4:badminton(a,count,b);
+break;
+case 5:neither(n);
+      break;
+}
+}while(choice!=6);
+return 0;
+}
+void either(int q)
+{	int n=q,i;
+for(i=0;i<n;i++)
+{
+if(s[i].crick==1||s[i].bad==1||(s[i].crick==1 && s[i].bad==1))
+{
+  printf("%d\t",s[i].rollno);
+}
+}
+}
+void both(int r)
+{
+int i,n=r;
+for(i=0;i<n;i++)
+{
+if(s[i].crick==1 && s[i].bad==1)
+{
+printf("%d\t",s[i].rollno);
+}
+}
+}
+void cricket(int b[],int s,int a[])
+{
+int i,count1=s;
+for(i=0;i<count1;i++)
+{
+if (a[i]!=b[i])
+printf("%d\t",b[i]);
+}
+}
+void badminton(int a[],int p,int b[])
+{
+int i,count=p;
+for(i=0;i<count;i++)
+{
+if (b[i]!=a[i])
+printf("%d\t",a[i]);
+}
+}
+void neither(int t)
+{
+int i,n=t;
+for(i=0;i<n;i++)
+{
+if(s[i].crick!=1 && s[i].bad!=1)
+{
+printf("%d\t",s[i].rollno);
+}
+}
+
+}

@@ -1,0 +1,121 @@
+#include<iostream>
+#include<conio.h>
+#include<vector>
+#include<string.h>
+#include<algorithm>
+using namespace std;
+
+class Item
+{
+	public:
+		char name[80];
+		int code;
+		int cost;
+		//int qty;
+		void set()
+		{
+			cout<<"Enter name";
+			cin>>name;
+			cout<<"Enter code";
+			cin>>code;
+			cout<<"Enter cost";
+			cin>>cost;
+		}
+		void show()
+		{
+			cout<<"\n"<<name<<" "<<cost<<" "<<code;
+		}
+};
+
+bool sortbyname(const Item &rhs,const Item &lhs)
+{
+	if(strcmp(rhs.name,lhs.name)<0)
+		return true;
+	return false;
+}
+
+bool sortbycost(const Item &rhs,const Item &lhs)
+{
+	if(rhs.cost>lhs.cost)
+		return true;
+	return false;
+}
+
+
+int main()
+{
+	int n,i,choice;
+	Item obj;
+	vector<Item>itm;
+	cout<<"Enter how many Items\n";
+	cin>>n;
+	for(i=0;i<n;i++)
+	{
+		obj.set();
+		itm.push_back(obj);
+	}
+	
+	cout<<"Enter your choice of operation\n";
+	cout<<"1-sort by name\n2-sort by cost\n3-search by name";
+	cin>>choice;
+	
+	
+	switch(choice)
+	{
+		
+		case 1:
+		sort(itm.begin(),itm.end(),sortbyname);
+		
+		cout<<"Sorted itemlist is\n";
+		for(i=0;i<n;i++)
+		{
+			itm[i].show();
+		}
+		break;
+		
+		case 2:
+		sort(itm.begin(),itm.end(),sortbycost);
+		cout<<"\nSorted item list by cost";
+		for(i=0;i<n;i++)
+		{
+			itm[i].show();
+		}
+		break;
+		
+		case 3:
+
+	vector <Item>::iterator itr;
+	vector<string>temp;
+	vector<string>::iterator itr1;
+	string str;
+	
+		cout<<"\nEnter item to search\n";
+		cin>>str;
+		
+		itr=itm.begin();
+		
+		while(itr!=itm.end())
+		{
+			temp.push_back((*itr).name);
+			itr++;
+		
+		}
+		itr1=temp.begin();
+		itr1=find(temp.begin(),temp.end(),str);
+		if(itr1!=temp.end())
+		{
+			int pos=itr1-temp.begin();
+			cout<<"\n";
+			itm[pos].show();
+		}
+		else
+		{
+	
+			cout<<"\nNOT FOOUND";
+		}
+		break;
+		
+		default:cout<<"Wrong option";
+	}
+}
+

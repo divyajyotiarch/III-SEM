@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Assignment3/src/Assignment3.cpp&apos; to &apos;polynomial.cpp&apos;" description="Rename resource &apos;Assignment3.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/Assignment3.cpp" name="polynomial.cpp" stamp="1502341973829" updateReferences="true"/>
+</session>

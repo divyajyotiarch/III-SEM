@@ -1,0 +1,95 @@
+#include<iostream>
+using namespace std;
+
+struct node
+{
+	char ch;
+	int no;
+	node *next;
+	node *prev;
+};
+
+class cinemax
+{
+	node *a[10];
+	node *s,*l;
+public:
+	cinemax()
+	{
+		s=NULL;
+		l=NULL;
+		for (int i=0;i<10;i++)
+		{
+			a[i]=NULL;
+		}
+	}
+	void create();
+	void book();
+	void cancel();
+	void display();
+};
+
+void cinemax::create()
+{
+	node *new1=NULL,*new2=NULL;
+	for(int i=0;i<10;i++)
+	{
+		if (a[i]==NULL)
+		{
+			new1=new node;
+			new1->ch='U';
+			a[i]=new1;
+			new1->next=new1;
+			new1->prev=new1;
+		}
+	}
+	for(int i=0;i<10;i++)
+		{
+		if(a[i]==new1)
+			{
+				for(int j=0;j<6;j++)
+							{
+								new2=new node;
+								new2->ch='U';
+								new1->next=new2;
+								new2->next=a[i];
+								new2->prev=new1;
+						    }
+			}
+			else
+			{
+				for(int j=0;j<6;j++)
+							{
+								new2=new node;
+								new2->ch='U';
+								new1->next=new2;
+								new2->next=new1;
+								new2->prev=new1;
+								new1->prev=new2;
+								l=new2;
+							}
+			}
+	 }
+}
+void cinemax::display()
+{
+	node *c=NULL;
+	for(int i=0;i<10;i++)
+	{
+		c=a[i];
+		while(c!=l)
+		{
+			cout<<c->ch<<"==>";
+		}
+		cout<<endl;
+	}
+}
+
+int main()
+{
+	cinemax z;
+	z.create();
+	z.display();
+
+	return 0;
+}

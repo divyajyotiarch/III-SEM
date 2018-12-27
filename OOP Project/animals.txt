@@ -1,0 +1,102 @@
+1 monkey
+2 lion
+3 snake
+4 ant
+5 bat
+6 tiger
+7 dog
+8 cow
+9 elephant 
+10 crocodile
+11 rhinoceros
+12 hippopotamus
+13 bear
+14 butterfly
+15 dolphin
+Beetle
+Bison
+Buffalo
+Butterfly
+Camel
+Cassowary
+Cat
+Caterpillar
+Centipede
+Chameleon 
+Cheetah
+Chicken 
+Chimpanzee
+Chipmunk
+Cockroach
+Cow
+Crab
+Crane
+Crocodile
+Deer
+Dodo
+Dog
+Dolphin
+Donkey
+Dragonfly
+Duck
+Eagle
+Elephant
+Emu
+Falcon
+Ferret
+Fish
+Flamingo
+Fly
+Fox
+Frog
+Giraffe
+Goat
+Gorilla
+Hamster
+Hippopotamus
+Horse
+Iguana
+Jackal
+Jaguar
+Kangaroo
+Kingfisher
+Koala
+Langur
+Lemur
+Leopard
+Lion
+Lizard
+Lobster
+Macaw
+Mongoose
+Monkey
+Mouse
+Nightingale
+Octopus
+Orangutan
+Ostrich
+Rabbit
+Raccoon
+Rat
+Rhinoceros
+Robin
+Scorpion
+Seahorse
+Seal
+Sheep
+Shrimp
+Skunk
+Sloth
+Snail
+Snake
+Sparrow
+Squirrel
+Starfish
+Tiger
+Tortoise
+Vulture
+Wolf
+Woodpecker
+Yak
+Zebra
+

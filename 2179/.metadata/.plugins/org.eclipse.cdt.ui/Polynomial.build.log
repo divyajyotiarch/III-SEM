@@ -1,0 +1,11 @@
+
+**** Build of configuration Build (GNU) for project Polynomial ****
+
+make all 
+Making all in src
+make[1]: *** No rule to make target `Assignment3.cpp', needed by `Assignment3.o'.  Stop.
+make: *** [all-recursive] Error 1
+make[1]: Entering directory `/home/pict/2179/Polynomial/src'
+make[1]: Leaving directory `/home/pict/2179/Polynomial/src'
+
+**** Build Finished ****

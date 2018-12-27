@@ -1,0 +1,8 @@
+Book Name	ID		Copies
+DSA		1		3
+OOP		2		2
+COA		3		2
+DM		4		3
+DELD		5		2
+CG		6		2
+	

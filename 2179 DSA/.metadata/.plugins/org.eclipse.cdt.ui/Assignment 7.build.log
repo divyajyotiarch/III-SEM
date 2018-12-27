@@ -1,0 +1,11 @@
+
+**** Build of configuration Build (GNU) for project Assignment 7 ****
+
+make all 
+Making all in src
+make[1]: Entering directory `/home/pict/2179/Assignment 7/src'
+make[1]: *** No rule to make target `7.cpp', needed by `7.o'.  Stop.
+make[1]: Leaving directory `/home/pict/2179/Assignment 7/src'
+make: *** [all-recursive] Error 1
+
+**** Build Finished ****

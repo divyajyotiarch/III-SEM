@@ -1,0 +1,11 @@
+
+**** Build of configuration Build (GNU) for project SparseAss ****
+
+make all 
+Making all in src
+make[1]: Entering directory `/home/pict/2179/SparseAss/src'
+make[1]: *** No rule to make target `SparseAss.cpp', needed by `SparseAss.o'.  Stop.
+make[1]: Leaving directory `/home/pict/2179/SparseAss/src'
+make: *** [all-recursive] Error 1
+
+**** Build Finished ****

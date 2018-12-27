@@ -1,0 +1,13 @@
+
+**** Build of configuration Build (GNU) for project Assignment12A ****
+
+make all 
+Making all in src
+make[1]: Entering directory `/home/pict/2179/Assignment12A/src'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/home/pict/2179/Assignment12A/src'
+make[1]: Entering directory `/home/pict/2179/Assignment12A'
+make[1]: Nothing to be done for `all-am'.
+make[1]: Leaving directory `/home/pict/2179/Assignment12A'
+
+**** Build Finished ****
